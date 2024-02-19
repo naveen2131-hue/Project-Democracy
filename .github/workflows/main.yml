@@ -22,5 +22,5 @@ jobs:
 
     - name: Run horusec
       run: |
-        horusec start -p . -o sonarqube
+        horusec start -o sonarqube
         ls
