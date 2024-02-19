@@ -16,8 +16,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Run Horusec
-      id: run_horusec
-      uses: fike/horusec-action@v0.1
-      with:
-        arguments: --config-file-path=horusec-config.json
+    - name: Install horusec
+      run: |
+        curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/master/deployments/scripts/install.sh | bash -s latest
+
+    - name: Run horusec
+      run: |
+        horusec start -P ./ -e -o sonarqube
