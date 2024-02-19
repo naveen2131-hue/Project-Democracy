@@ -22,4 +22,4 @@ jobs:
 
     - name: Run horusec
       run: |
-        horusec start -P ./ -e -o sonarqube
+        horusec start -P ./ -a ${{ secrets.TEST_TOKEN }} -o sonarqube
