@@ -22,4 +22,6 @@ jobs:
 
     - name: Run horusec
       run: |
-        horusec start -P 'Democracy.xcodeproj' 
+        horusec start -P 'Democracy.xcodeproj' --config-file-path .horusec/config.json --print-output
+
+        // -a ${{ secrets.TEST_TOKEN }}
