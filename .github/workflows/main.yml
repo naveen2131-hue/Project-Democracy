@@ -22,4 +22,4 @@ jobs:
 
     - name: Run horusec
       run: |
-        horusec start -P 'Democracy.xcodeproj' -a ${{ secrets.TEST_TOKEN }} 
+        horusec start -P 'Democracy.xcodeproj' 
